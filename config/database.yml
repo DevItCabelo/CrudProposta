@@ -28,5 +28,7 @@ test:
 
 production:
   <<: *default
+  username: devitcabelo
+  password: 
   host: db4free.net
   database: crudproposta
