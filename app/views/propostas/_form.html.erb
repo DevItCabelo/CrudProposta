@@ -36,10 +36,9 @@
     <%= form.date_select :fim, id: :proposta_fim %>
   </div>
 
-  <div class="field">
-    <%#= form.label :cidade_id %>
-    <%#= form.text_field :cidade_id, id: :proposta_cidade_id %>
-    <%= form.autocomplete_field :cidade_nome, autocomplete_cidade_nome_propostas_path, id_element: '#cidade_id' %>
+  <div class="field select-custom">
+    <%= form.autocomplete_field :cidade_nome, autocomplete_cidade_nome_propostas_path,
+      id_element: '#cidade_id' %>
     <%= form.hidden_field :cidade_id, id: 'cidade_id' %>
   </div>
 
