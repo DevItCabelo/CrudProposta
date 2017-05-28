@@ -1,0 +1,49 @@
+<%= form_with(model: proposta, local: true) do |form| %>
+  <% if proposta.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proposta.errors.count, "error") %> prohibited this proposta from being saved:</h2>
+
+      <ul>
+      <% proposta.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_area :nome, id: :proposta_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :proposta_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor, id: :proposta_valor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inicio %>
+    <%= form.date_select :inicio, id: :proposta_inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fim %>
+    <%= form.date_select :fim, id: :proposta_fim %>
+  </div>
+
+  <div class="field">
+    <%#= form.label :cidade_id %>
+    <%#= form.text_field :cidade_id, id: :proposta_cidade_id %>
+    <%= form.autocomplete_field :cidade_nome, autocomplete_cidade_nome_propostas_path, id_element: '#cidade_id' %>
+    <%= form.hidden_field :cidade_id, id: 'cidade_id' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
