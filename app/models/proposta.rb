@@ -1,5 +1,7 @@
 class Proposta < ApplicationRecord
   belongs_to :cidade
+  validates_presence_of :nome, :descricao, :valor, :cidade
+  validates :valor, numericality: true
 
   def valor_formatado
     valor ? "R$%.2f" % valor : valor
