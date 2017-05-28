@@ -20,13 +20,13 @@
       <tr>
         <td><%= proposta.nome %></td>
         <td><%= proposta.descricao %></td>
-        <td><%= proposta.valor %></td>
-        <td><%= proposta.inicio %></td>
-        <td><%= proposta.fim %></td>
+        <td><%= proposta.valor_formatado %></td>
+        <td><%= proposta.inicio_formatado %></td>
+        <td><%= proposta.fim_formatado %></td>
         <td><%= proposta.cidade %></td>
-        <td><%= link_to 'Show', proposta %></td>
-        <td><%= link_to 'Edit', edit_proposta_path(proposta) %></td>
-        <td><%= link_to 'Destroy', proposta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', proposta %></td>
+        <td><%= link_to 'Editar', edit_proposta_path(proposta) %></td>
+        <td><%= link_to 'Deletar', proposta, method: :delete, data: { confirm: 'Tem certeza que deseja remover a proposta?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Proposta', new_proposta_path %>
+<%= link_to 'Nova Proposta', new_proposta_path %>

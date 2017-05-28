@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :valor %>
-    <%= form.text_field :valor, id: :proposta_valor %>
+    <%= form.text_field :valor_formatado_edit, id: :proposta_valor %>
   </div>
 
   <div class="field">
@@ -36,9 +36,9 @@
     <%= form.date_select :fim, id: :proposta_fim %>
   </div>
 
-  <div class="field select-custom">
+  <div class="field">
     <%= form.autocomplete_field :cidade_nome, autocomplete_cidade_nome_propostas_path,
-      id_element: '#cidade_id' %>
+      id_element: '#cidade_id', id: :proposta_cidade_nome %>
     <%= form.hidden_field :cidade_id, id: 'cidade_id' %>
   </div>
 
