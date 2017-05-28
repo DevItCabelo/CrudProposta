@@ -12,17 +12,17 @@
 
 <p>
   <strong>Valor:</strong>
-  <%= @proposta.valor %>
+  <%= @proposta.valor_formatado %>
 </p>
 
 <p>
   <strong>Inicio:</strong>
-  <%= @proposta.inicio %>
+  <%= @proposta.inicio_formatado %>
 </p>
 
 <p>
   <strong>Fim:</strong>
-  <%= @proposta.fim %>
+  <%= @proposta.fim_formatado %>
 </p>
 
 <p>
@@ -30,5 +30,5 @@
   <%= @proposta.cidade %>
 </p>
 
-<%= link_to 'Edit', edit_proposta_path(@proposta) %> |
-<%= link_to 'Back', propostas_path %>
+<%= link_to 'Editar', edit_proposta_path(@proposta) %> |
+<%= link_to 'Voltar', propostas_path %>
