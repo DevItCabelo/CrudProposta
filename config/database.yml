@@ -28,4 +28,5 @@ test:
 
 production:
   <<: *default
+  host: db4free.net
   database: crudproposta
