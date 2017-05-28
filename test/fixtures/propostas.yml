@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyText
+  descricao: 
+  valor: 9.99
+  inicio: 2017-05-28
+  fim: 2017-05-28
+  cidade: one
+
+two:
+  nome: MyText
+  descricao: 
+  valor: 9.99
+  inicio: 2017-05-28
+  fim: 2017-05-28
+  cidade: two
